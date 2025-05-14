@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+<style>
+/* Resetando margem e definindo fonte para a pagina toda */
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    /* Definindo fundo da pagina como um grandiente e centrelizando */
+    body{
+        height: 100vh;
+        background: linear-gradient(32deg, green, purple, yellow, red );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .login-container{
+        background: cyan;
+        padding: 40px 30px;
+        border-radius: 12px;
+        width: 300px;
+        text-align: center;
+        box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
+    }
+    
+    /* Estilizar o titulo (login) */
+    .login-container h2{
+        margin-bottom: 25px;
+        color: blue
+    }
+    /*  Estilizando os campos de entrada (usuario e senha) */
+    .login-container input{
+        width: 100%;
+        padding: 5px 10px;
+        margin: 5px 0;
+        border: 1px solid #acc;
+        border-radius: 8px;
+        font-size: 15px;
+    }
+    /*  Estilizando botão */
+    .login-container button{
+        width: 100%;
+        padding: 12px;
+        margin-top: 10px;
+        border: none;
+        border-radius: 8px;
+        background: lightgreen;
+        color: purple;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+    /* Animação  */
+    .login-container button:hover{
+        background: yellow;
+    }
+    /*  Etilizando o "Esqueceu a senha?" */
+    .login-container p{
+        margin-top: 15px;
+        font-size: 15px;
+        color: green
+    }
+
+
+</style>
+</head>
+<body>
+    <!--Container da tela de login-->
+    <div class="login-container">
+        <h2>Login</h2>
+        <form>
+            <input type="text" placeholder="Usuário" required>
+            <input type="password" placeholder="Senha" required>
+            <br>
+            <button type="submit">Entre</button>
+        </form>
+        <p>Esqueceu a senha?</p>
+    </div>
+</body>
+</html>
