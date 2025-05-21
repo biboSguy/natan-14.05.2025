@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background: linear-gradient(to bottom, cyan, purple);
+            font-family: 'Courier New', Courier, monospace;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            color: black;
+            padding: 20px;
+        }
+        .container{
+            background-color: white;
+            border: 3px solid black;
+            padding: 30px;
+            width: 300px;
+            text-align: center;
+            position: relative;
+            font-size: 16px;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+        .container h1{
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: black;
+        }
+        .imagem-pokemon{
+            width: 150px;
+            height: 150px;
+            margin-bottom: 15px;
+            border-radius: 15px;
+            object-fit: contain;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+        .info-pokemon{
+            font-size: 15px;
+            color: #555
+        }
+        .info-pokemon p{
+            margin: 13px 0;
+        }
+        .fita-tipo{
+            display: inline-block;
+            background-color: cyan;
+            padding: 5 12px;
+            border-radius: 12px;
+            font-size: 14px;
+            margin-top: 8px;
+        }
+        .area-busca{
+            margin-top: 20px;
+        }
+        .area-busca input{
+            padding: 8px;
+            border-radius: 8px;
+            border: 1px solid #acc;
+            width: 80%;
+            margin-bottom: 10px;
+            font-size: 13px;
+        }
+        .area-busca button{
+            padding: 8px 16px;
+            background-color: lightskyblue;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .area-busca button:hover{
+            background-color: lightseagreen;
+            transform: scale(1.1);
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Cartão principal da Pokedex -->
+     <div class="container">
+        <h1>PokéDex</h1>
+        <!-- Imagme do Pokemon -->
+         <img class="imagem-pokemon" src="https://via.placeholder.com/150" alt="Imagem do pokemon" id="imagem">
+
+        <!-- Area com os dados do Pokemon -->
+         <div class="info-pokemon">
+            <p><strong>Nome:</strong> <span id ="nome">---</span></p>
+            <p><strong>Número:</strong> <span id ="numero">---</span></p>
+            <p><strong>Tipo:</strong> <span id ="tipo">---</span></p>
+         </div>
+
+         <!-- campo para digitar nome ou numero -->
+          <div class="area-busca">
+            <input type="text" id="entrada" placeholder="Informe o Nome ou Número">
+            <button id="botao-buscar">Buscar</button>
+          </div>
+
+     </div>
+    <script src="/script.js"></script>
+</body>
+</html>
